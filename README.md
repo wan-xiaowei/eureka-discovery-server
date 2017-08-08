@@ -35,4 +35,7 @@ eureka:
   <spring-cloud.version>Dalston.SR1</spring-cloud.version>
   otherwise ， 报错。。。
   dependencyManagement里只是声明依赖，并不实现引入.
+  
+  
+#优化:http://blog.csdn.net/lc0817/article/details/54375802
    

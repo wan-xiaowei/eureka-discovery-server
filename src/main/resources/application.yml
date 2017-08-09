@@ -10,6 +10,15 @@
  #   fetchRegistry: false
  #   serviceUrl:
   #    defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+spring:
+   application:
+    name: eureka-server
+security:
+  basic:
+    enabled: true
+  user:
+    name: root
+    password: root
 ---
 spring:
   profiles: discovery                                 # 指定profile=discovery
@@ -18,9 +27,12 @@ server:
 eureka:
   instance:
     hostname: discovery                               # 指定当profile=discovery，主机名
+    #virtual-host-name:                   #虚拟主机名(默认和服务名称一致)
   client:
     serviceUrl:
-      defaultZone: http://discovery2:8762/eureka/      # 将自己注册到discovery2这个Eureka上面去
+      defaultZone: http://root:root@discovery2:8762/eureka/      # 将自己注册到discovery2这个Eureka上面去
+    healthcheck:
+      enabled: true
 
 ---
 spring:
@@ -30,6 +42,9 @@ server:
 eureka:
   instance:
     hostname: discovery2
+    #virtual-host-name:
   client:
     serviceUrl:
-      defaultZone: http://discovery:8761/eureka/
+      defaultZone: http://root:root@discovery:8761/eureka/
+    healthcheck:
+          enabled: true

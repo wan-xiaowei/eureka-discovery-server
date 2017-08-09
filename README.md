@@ -1,7 +1,7 @@
 
 ##详解: http://blog.csdn.net/beyannanfei/article/details/52069725
 
-
+修改hosts文件;127.0.0.1  discovery discovery2
 
 server:
   context-path: /eureka-server

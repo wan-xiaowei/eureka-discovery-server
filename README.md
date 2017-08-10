@@ -37,6 +37,6 @@ eureka:
   dependencyManagement里只是声明依赖，并不实现引入.
   
   
-# 优化:http://blog.csdn.net/lc0817/article/details/54375802
+## 优化:http://blog.csdn.net/lc0817/article/details/54375802
 
-# SpringCloud代码 : http://git.oschina.net/itmuch/spring-cloud-study
+## SpringCloud代码 : http://git.oschina.net/itmuch/spring-cloud-study
